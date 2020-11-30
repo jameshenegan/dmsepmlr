@@ -7,8 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "jimhenegan@gmail.com")
 Description: This package estimates predictive margins, along with their delta method standard errors, for a logistic regression model having a binary main effect and any number of adjustors.  The margins are then used to produce additional estimates, including an "adjusted risk difference" and an "adjusted risk ratio."
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
