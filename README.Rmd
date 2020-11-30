@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# dmsepmlr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+**D**elta **M**ethod **S**tandard **E**rrors for various quantities related to the **P**redictive **M**argins of a **L**ogistic **R**egression model with a binary main effect and any number of adjustors.
+
+ This package estimates predictive margins, along with their delta method standard errors, for a logistic regression model having a binary main effect and any number of adjustors.  The margins are then used to produce additional estimates, including an "adjusted risk difference" and an "adjusted risk ratio."
+
+## Installation
+
+You can install the development version of dmsepmlr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("jameshenegan/dmsepmlr")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(dmsepmlr)
+library(haven)
+dat <- read_dta("http://www.stata-press.com/data/r13/margex.dta")
+logMarginsResults <- logisticMargins(formula = outcome ~ treatment + distance,
+                                     main_effect = "treatment",
+                                     over = FALSE,
+                                     data = dat)
+logMarginsResults
+```
