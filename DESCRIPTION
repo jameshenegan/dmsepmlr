@@ -1,13 +1,12 @@
 Package: dmsepmlr
-Title: What the Package Does (One Line, Title Case)
+Title: Delta Method Standard Errors for various quantities related to the Predictive Margins of a Logistic Regression Model
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "James",
+           family = "Henegan",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "jimhenegan@gmail.com")
+Description: This package estimates predictive margins, along with their delta method standard errors, for a logistic regression model having a binary main effect and any number of adjustors.  The margins are then used to produce additional estimates, including an "adjusted risk difference" and an "adjusted risk ratio."
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
